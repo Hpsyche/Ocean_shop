@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/js/page.js"></script>
+		<script type="text/javascript" src="/js/verify.js"></script>
+	</head>
+	<body>
+		<!-------------------reg-------------------------->
+		<div class="reg">
+			<form id="form1" method="post">
+				<h1><a href="index.html"><img src="../../img/logo.png"></a></h1>
+				<p>用户注册</p>
+				<p><input type="text" id="username" name="username" value="" placeholder="用户名"></p>
+				<span id="userMsg"></span>
+				<p><input type="text" id="email" name="email" value="" placeholder="邮箱"></p>
+				<span id="emailMsg"></span>
+				<p><input type="password" id="password1" style="border:1px solid #dbdbdb;font-size: 20px;padding-left:10px;"
+						  name="password" value="" placeholder="密码"></p>
+				<p><input type="password" id="password2" style="border:1px solid #dbdbdb;font-size: 20px;padding-left:10px;"
+						  name="repassword" value="" placeholder="确认密码"></p>
+				<span id="passwordMsg"></span>
+				<p><input type="button" id="toSubmit" value="注册" style="font-size: 20px;color: #404040"></p>
+				<p class="txt"><a href="javascript:login()"><span></span>已有账号登录</a></p>
+				<!--<a href="#" class="off"><img src="img/temp/off.png"></a>-->
+			</form>
+		</div>
+	</body>
+</html>

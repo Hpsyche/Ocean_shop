@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.UserMapper" >
+    <select id="findUsername" parameterType="String" resultType="OsUser">
+        select * from os_user where username=#{username}
+    </select>
+    <select id="findEmail" parameterType="String" resultType="OsUser">
+        select * from os_user where email=#{email}
+    </select>
+    <insert id="createUser" parameterType="OsUser" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        os_user(username,password,email,created,updated)
+        values(#{username},#{password},#{email},#{created},#{updated})
+    </insert>
+    <select id="findUserByMsg" parameterType="String" resultType="OsUser">
+         select * from os_user where username=#{username}
+    </select>
+    <!--OsUser getUserById(Long userId);-->
+    <select id="getUserById" parameterType="long" resultType="OsUser">
+        select * from os_user where id=#{userId}
+    </select>
+    <!--void updatePassword(OsUser user);-->
+    <update id="updatePassword" parameterType="OsUser">
+        update os_user set password=#{password} where id=#{id}
+    </update>
+</mapper>

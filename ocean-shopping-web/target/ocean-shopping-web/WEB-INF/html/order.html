@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<title>order</title>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/proList.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mygxin.css" />
+	</head>
+	<body>
+		<!----------------------------------------order------------------>
+		<div class="head ding">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fl"><a href="index.html"><img src="../../img/logo.png"/></a></h1>
+					<div class="fr clearfix" id="top1">
+						<p class="fl">
+							<a href="#" id="login">登录</a>
+							<a href="#" id="reg">注册</a>
+						</p>
+						<form class="fl">
+							<input id="searchContext" type="text" placeholder="热门：乐事薯片" style="width: 120px;"/>
+							<input id="search" type="button" />
+							<input type="text" style="display:none" />
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="order cart mt">
+			<!-----------------site------------------->
+			<div class="site">
+				<p class="wrapper clearfix">
+					<span class="fl">订单确认</span>
+					<img class="top" src="../../img/temp/cartTop02.png">
+				</p>
+			</div>
+			<!-----------------orderCon------------------->
+			<div class="orderCon wrapper clearfix">
+				<div class="orderL fl">
+					<!--------h3---------------->
+					<h3>收件信息<a id="addOrderAddress" class="fr">新增地址</a></h3>
+					<!--------addres---------------->
+					<div class="addres clearfix" id="orderAddress">
+					</div>
+					<h3>支付方式</h3>
+					<!--------way---------------->
+					<div class="way clearfix">
+						<img class="on" src="../../img/temp/way01.jpg">
+						<img src="../../img/temp/way02.jpg">
+						<img src="../../img/temp/way03.jpg">
+						<img src="../../img/temp/way04.jpg">
+					</div>
+					<h3>选择快递</h3>
+					<!--------dis---------------->
+					<div class="dis clearfix">
+						<span class="on">顺风快递</span>
+						<span>百世汇通</span>
+						<span>圆通快递</span>
+						<span>中通快递</span>
+					</div>
+				</div>
+				<div class="orderR fr">
+					<div class="msg" id="orderAndItems" style="height: 140px">
+						<h3>订单内容<a href="cart.html" class="fr">返回购物车</a></h3>
+					</div>
+					<!--------tips---------------->
+					<div class="tips" id="fees">
+					</div>
+					<!--------tips count---------------->
+					<div class="count tips" id="totalFee">
+					</div>
+					<!--<input type="button" name="" value="去支付"> -->
+					<a href="javascript:pay()" class="pay">去支付</a>
+				</div>
+			</div>
+		</div>
+		<!--编辑弹框-->
+		<!--遮罩-->
+		<div class="mask"></div>
+		<div class="adddz">
+			<form id="addressForm" >
+				<input type="text" style="display: none">
+				<input type="text" name="receiverName" placeholder="姓名" class="on" />
+				<input type="text" name="receiverMobile" placeholder="手机号" />
+				<div class="city">
+					<select name="receiverProvince" id="province">
+						<!--<option value="440000">广东省</option>-->
+					</select>
+					<select name="receiverCity" id="city">
+						<!--<option value="440800">湛江市</option>-->
+					</select>
+					<select name="receiverArea" id="area">
+						<!--<option value="440811">麻章区</option>-->
+					</select>
+				</div>
+				<textarea name="receiverAddress" rows="" cols="" placeholder="详细地址"></textarea>
+				<input type="text" name="receiverZip" placeholder="邮政编码" />
+				<div class="bc">
+					<input id="addressFormSubmit" value="保存" />
+					<input type="button" value="取消" />
+				</div>
+			</form>
+		</div>
+		<div class="readd">
+			<form id="addressFormUpdate" >
+				<input type="hidden" id="addressId" name="addressId" value="">
+				<input type="text" name="receiverName" placeholder="姓名" class="on" />
+				<input type="text" name="receiverMobile" placeholder="手机号" />
+				<div class="city">
+					<select name="receiverProvince" id="provinceUpdate">
+						<!--<option value="440000">广东省</option>-->
+					</select>
+					<select name="receiverCity" id="cityUpdate">
+						<!--<option value="440800">湛江市</option>-->
+					</select>
+					<select name="receiverArea" id="areaUpdate">
+						<!--<option value="440811">麻章区</option>-->
+					</select>
+				</div>
+				<textarea name="receiverAddress" rows="" cols="" placeholder="详细地址"></textarea>
+				<input type="text" name="receiverZip" placeholder="邮政编码" />
+				<div class="bc">
+					<input id="addressFormSubmitUpdate" value="保存" />
+					<input type="button" value="取消" />
+				</div>
+			</form>
+		</div>
+		<!--返回顶部-->
+		<div class="gotop">
+			<a href="cart.html">
+			<dl>
+				<dt><img src="../../img/gt1.png"/></dt>
+				<dd>去购<br />物车</dd>
+			</dl>
+			</a>
+			<a href="#" class="dh">
+			<dl>
+				<dt><img src="../../img/gt2.png"/></dt>
+				<dd>联系<br />客服</dd>
+			</dl>
+			</a>
+			<a href="mygxin.html">
+			<dl>
+				<dt><img src="../../img/gt3.png"/></dt>
+				<dd>个人<br />中心</dd>
+			</dl>
+			</a>
+			<a href="#" class="toptop" style="display: none;">
+			<dl>
+				<dt><img src="../../img/gt4.png"/></dt>
+				<dd>返回<br />顶部</dd>
+			</dl>
+			</a>
+			<p>400-800-8200</p>
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<div class="top">
+				<div class="wrapper">
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="../../img/foot1.png"/></a>
+						<span class="fl">7天无理由退货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="../../img/foot2.png"/></a>
+						<span class="fl">15天免费换货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="../../img/foot3.png"/></a>
+						<span class="fl">满599包邮</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="../../img/foot4.png"/></a>
+						<span class="fl">手机特色服务</span>
+					</div>
+				</div>
+			</div>
+			<p class="dibu">海大小栈&copy;2018-2019公司版权所有 京ICP备080100-44备0000111000号<br />
+				违法和不良信息举报电话：157-1234-56789，本网站所列数据，除特殊说明，所有数据均来自网上</p>
+		</div>
+		<script src="../../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/pro.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/address.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/order.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/proCityChange.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ali.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

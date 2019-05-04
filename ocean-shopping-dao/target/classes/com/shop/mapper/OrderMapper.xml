@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.OrderMapper" >
+    <insert id="createOrder" parameterType="OsOrder">
+        insert into
+        os_order
+        values
+        (#{orderId},#{payment},#{paymentType},#{postFee},#{status},#{createTime},#{updateTime},#{consignTime},#{userId},#{buyerLinkman},#{buyerTel},#{buyerAddress})
+    </insert>
+
+    <select id="selectByOrderId" parameterType="long" resultType="OsOrder">
+        select *
+        from os_order
+        where order_id=#{orderId}
+    </select>
+
+    <!--List<OsOrder> selectOrdersByUserId(Long userId);-->
+    <select id="selectOrdersByUserId" parameterType="com.shop.uiils.SearchOrderByStatus" resultType="OsOrder">
+        select * from os_order where user_id=#{userId}
+        <if test="status!=0">
+            and status=#{status}
+        </if>
+    </select>
+
+    <!--void updateOrder(CreateAliOrder order);-->
+    <update id="updateOrder" parameterType="CreateAliOrder">
+        update os_order
+        set buyer_linkman=#{name},buyer_tel=#{mobile},buyer_address=#{address}
+        where order_id=#{id}
+    </update>
+
+    <!--void updateOrderStatus(Long id);-->
+    <update id="updateOrderStatus" parameterType="String">
+        update os_order
+        set status=2
+        where order_id=#{id}
+    </update>
+
+
+</mapper>

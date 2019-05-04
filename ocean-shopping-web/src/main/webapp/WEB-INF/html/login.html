@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/js/page.js"></script>
+		<script type="text/javascript" src="/js/verify.js"></script>
+	</head>
+	<body>
+		<!-------------------page-------------------------->
+		<div class="login">
+			<form id="formLogin" method="post">
+				<h1><a href="index.html"><img src="../../img/logo.png"></a></h1>
+				<p></p>
+				<div class="msg-warn hide"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+				<p><input type="text" id="loginMsg" name="loginMsg" value="" placeholder="用户名"></p>
+				<p><input type="text" id="password" name="password" value="" placeholder="密码"></p>
+				<span id="loginReturnMsg"></span>
+				<p><input type="button" id="butLogin" value="登  录" style="font-size: 20px;color: #404040"></p>
+				<p class="txt"><a class="" href="javascript:register()">免费注册</a>
+					<a href="forget.html">忘记密码？</a></p>
+			</form>
+		</div>
+		
+	</body>
+</html>

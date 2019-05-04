@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.OsUserAddressMapper" >
+    <insert id="insertAddress" parameterType="OsUserAddress" >
+        insert into
+        os_user_address
+        values(#{addressId},#{userId},#{receiverName},#{receiverMobile},#{receiverProvince},
+        #{receiverCity},#{receiverArea},#{receiverAddress},#{receiverZip},#{receiverCreated},#{receiverUpdated})
+    </insert>
+    <!--    List<OsUserAddress> findAllByUserId(Long userId);-->
+    <select id="findAllByUserId" parameterType="long" resultType="OsUserAddress">
+        select * from os_user_address where user_id=#{userId}
+    </select>
+    <!--OsUserAddress selectAddressByAddressId(Long addId);-->
+    <select id="selectAddressByAddressId" parameterType="long" resultType="OsUserAddress">
+        select * from os_user_address where address_id=#{addId}
+    </select>
+    <!--void updateAddress(OsUserAddress userAddress);-->
+    <update id="updateAddress" parameterType="OsUserAddress" >
+        update
+        os_user_address
+        set receiver_name=#{receiverName},receiver_mobile=#{receiverMobile},receiver_province=#{receiverProvince},
+        receiver_city=#{receiverCity},receiver_area=#{receiverArea},receiver_address=#{receiverAddress},receiver_zip=#{receiverZip},
+        updated=#{receiverUpdated} where address_id=#{addressId}
+    </update>
+    <!--void deleteAddress(long addId);-->
+    <delete id="deleteAddress" parameterType="long">
+        delete from os_user_address where address_id=#{addId}
+    </delete>
+</mapper>

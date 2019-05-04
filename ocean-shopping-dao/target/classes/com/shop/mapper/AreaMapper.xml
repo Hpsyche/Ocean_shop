@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.AreaMapper" >
+    <select id="selectAreasByCId" parameterType="String" resultType="Area">
+        select code_a,name from area where code_c=#{cid}
+    </select>
+    <select id="selectAreasByAId" parameterType="String" resultType="Area">
+        select name from area where code_a=#{aid}
+    </select>
+</mapper>

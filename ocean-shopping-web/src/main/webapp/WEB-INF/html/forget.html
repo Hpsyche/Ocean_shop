@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<title>forget</title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/proList.css" />
+		<link rel="stylesheet" type="text/css" href="../css/forget.css" />
+	</head>
+	<body>
+		<!----------------------------------------order------------------>
+		<div class="order cart">
+			<!-----------------logo------------------->
+			<div class="logo">
+				<h1 class="wrapper clearfix">
+					<a href="/index.html"><img class="fl" src="../../img/logo.png"></a>
+				</h1>
+			</div>
+			<div class="forCon">
+				<p>安全设置-找回密码</p>
+				<ul>
+					<li class="on"><span>01/</span>输入登录名</li>
+					<li><span>02/</span>验证信息</li>
+					<li><span>03/</span>重置密码</li>
+				</ul>
+				<div  class="formCon">
+					<!--步骤1-->
+					<form class="one" action="#" style="display:block;">
+						<input type="text" id="username"  placeholder="昵称"><label>请输入昵称</label><br />
+						<input type="text" id="code" placeholder="验证码"><label>请输入验证码</label><br />
+						<img  border=0  id="verifyCode" src="" onclick="myReload()" style="cursor: pointer"/><br>
+						<input id="submitOne" type="button" value="下一步" class="next"><span style="color: red" id="msg"></span>
+					</form>
+					<!--步骤2-->
+					<form action="#" class="two" style="display: none;">
+						<p>电子邮箱：<span id="email"></span></p>
+						<span id="userId" hidden="hidden">58</span>
+						<p class="tip">验证邮件已发往你的电子邮箱，请到邮箱中获取您的验证码！</p>
+						验证码：<input type="text" id="verify"><span style="color: red" id="verifyMsg"></span><br/>
+						<input id="submitTwo" type="button" value="确认" class="next1">
+					</form>
+					<!--步骤3-->
+					<form action="#" class="three" style="display: none;">
+						<label>新密码：</label><input type="text" id="passwordOne" value=""><br />
+						<label>确认密码：</label><input type="text" id="passwordTwo" value=""></span><br/>
+						<span style="color: red" id="updatePassword"></span><br/>
+						<input id="submitThree" type="button" value="完成">
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/pro.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/forget.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

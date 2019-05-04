@@ -1,0 +1,5 @@
+com\shop\controller\PageController.class
+com\shop\controller\AddressController.class
+com\shop\controller\UserController.class
+com\shop\controller\utils\HtmlResourceView.class
+com\shop\controller\ItemCatController.class

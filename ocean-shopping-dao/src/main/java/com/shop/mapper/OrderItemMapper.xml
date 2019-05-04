@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.OrderItemMapper" >
+    <insert id="createOrderItem" parameterType="OsOrderItem">
+        insert into
+        os_order_item
+        values(#{id},#{itemId},#{orderId},#{num},#{title},#{price},#{totalFee},#{picPath})
+    </insert>
+
+    <select id="selectByOrderId" parameterType="long" resultType="OsOrderItem">
+        select * from os_order_item where order_id=#{orderId}
+    </select>
+</mapper>
